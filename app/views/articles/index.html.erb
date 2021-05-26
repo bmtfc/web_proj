@@ -1,9 +1,16 @@
 <h1>Articles</h1>
 
-Our blog has <%= Article.public_count %> articles and counting!
-
+Our blog has <%= Article.count %> articles, like:
+<br>
+<%= Article.public_count %> public
+<br>
+<%= Article.private_count %> private
+<br>
+<%= Article.archived_count %> archived
+<br>
 <ul>
   <% @articles.each do |article| %>
+
     <li>
       <%= link_to article.title, article %>
     </li>
